@@ -1,12 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include<math.h>
 int main()
 {
-    long long A, B;
-    while (scanf("%d %d", &A, &B) == 2)
+    int N;
+    int Count = 0;
+    scanf("%d", &N);
+    for (int i = 0; i < N; i++)
     {
-        printf("%lld\n", llabs(A - B));
-    }
+        float A;
 
-    return 0;
+        scanf("%f", &A);
+        if (fabs(fmod(A,2.0)) < 1e-6)
+        {
+            Count++;
+        }
+        printf("%d\n", Count);
+    }
 }
