@@ -2,11 +2,11 @@
 
 int main()
 {
-    int array[5];
+    float array[6];
 
     for (int i = 0; i < 6; i++)
     {
-        scanf("%f", &array);
+        scanf("%f", &array[i]);
     }
     int Count = 0;
     float sum = 0.00;
@@ -18,8 +18,9 @@ int main()
             sum += array[i];
         }
     }
-    printf("%f\n", sum);
-    printf("%d\n", Count);
+    printf("%d valores positivos\n", Count);
+
+    printf("%.1f\n", sum/Count); 
 
     return 0;
 }

@@ -6,6 +6,7 @@ int main()
     scanf("%f", &A);
     if (A > 1)
     {
+        printf("NOTAS:\n");
         if (A >= 100)
         {
             printf("%.f nota(s) de R$ 100.00\n", trunc(A / 100));
@@ -63,10 +64,12 @@ int main()
     }
     if (A == 1)
     {
+        printf("MOEDAS:\n");
         printf("%.f nota(s) de R$ 1.00\n", A);
     }
     else
     {
+        printf("MOEDAS:\n");
         printf("0 nota(s) de R$ 1.00\n");
     }
     A = fmod(A, 1.0);
