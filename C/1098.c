@@ -6,7 +6,7 @@ int main()
     for (int i = 0; i < 2; i++)
     {
         for (int i = 0; i < 3; i++)
-        {  
+        {
             printf("I=%.0f ", I);
             printf("J=%.0f\n", J);
             J++;
@@ -15,7 +15,7 @@ int main()
         {
             J--;
         }
-        
+
         I = I + 0.2;
         J = J + 0.2;
 
@@ -29,7 +29,6 @@ int main()
         {
             J--;
         }
-        
 
         I = I - 0.2 + 1;
         J = J - 0.2 + 1;
