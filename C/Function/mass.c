@@ -1,13 +1,26 @@
-#include<stdio.h>
-float weight(int m);
-float weight(int m){
-    return m * 9.8 ;
-}
+#include <stdio.h>
 
 int main()
-{   int m ;
-    scanf("%d",&m);
+{
+    int N;
+    scanf("%d", &N);
 
-    printf("%f",weight(m));
+    while (N--)
+    {
+        int X, Y, Z;
+        scanf("%d %d %d", &X, &Y, &Z);
+
+        int S = 10 * X;
+        
+        int amount = S * Z;
+        if(Y>X){
+            
+        }
+
+
+
+        printf("%d\n", amount);
+    }
+
     return 0;
 }

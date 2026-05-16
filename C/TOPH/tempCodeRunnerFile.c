@@ -1,15 +1,36 @@
 #include <stdio.h>
-#include <stdlib.h> //  absulate value niyar jnne
-#include<math.h>
 int main()
 {
-    int H, M;
-    scanf("%d %d", &H, &M); // hour and min defined
-    float h = 30 * H+ .5 * M;       // per hour e koto angle
-    float m = 6 * M;        // per minute a koto angle
-    float diff = fabs(h-m);
-    printf("%f",360-diff);
-   
+    int N, X;
+    int Arr[10];
+    int sum = 0;
+    int count = N;
+    scanf("%d %d", &N, &X);
+    for (int i = 0; i < 10; i++)
+    {
+        scanf("%d", &Arr[i]);
+    }
 
-    return 0;
+    for (int i = 0; i < 10; i++)
+    {
+        if (Arr[i] == 0)
+        {
+            sum = 1 + sum;
+            N = N - (i + 1);
+            if (N == 0)
+            {
+                break;
+            }
+        }
+    }
+
+    // printf("%d\n",sum);
+    if (sum == X && N <= 0)
+    {
+        printf("Happy\n");
+    }
+    else
+    {
+        printf("Sad\n");
+    }
 }

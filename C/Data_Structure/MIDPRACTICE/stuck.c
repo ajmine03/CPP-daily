@@ -1,0 +1,100 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct node
+{
+    int id;
+    char name;
+    struct node *next;
+    struct node *pre;
+};
+
+struct node *start = NULL;
+struct node *createnode()
+
+{
+
+    printf("You called createnode function\n");
+    int x;
+    char y;
+    printf("Enter the id: ");
+    scanf("%d", &x);
+    printf("Enter the name: ");
+    scanf(" %c", &y);
+    struct node *newnode;
+    newnode = (struct node *)malloc(sizeof(struct node));
+    newnode->id = x;
+    newnode->name = y;
+    newnode->next = NULL;
+    newnode->pre = NULL;
+    return newnode;
+}
+
+void traverselinkedlist()
+{
+
+    printf("You Called reserve traverse function\n");
+    printf("Linked list: \n");
+    struct node *i = start;
+    while (i->next != NULL)
+    {
+        i = i->next;
+    }
+    i = i;
+    while (i != NULL)
+    {
+        printf("%d %c\n", i->id, i->name);
+        i = i->pre;
+    }
+    printf("\n");
+}
+
+void push() // insert last
+{
+    printf("you called push function\n");
+    struct node *newnode = createnode();
+    if (start == NULL)
+    {
+        start = newnode;
+    }
+    else
+    {
+        struct node *i = start;
+        while (i->next != NULL)
+        {
+            i = i->next;
+        }
+        i->next = newnode;
+        newnode->pre = i;
+    }
+}
+
+void pop() //delete last
+{
+    printf("You called pop function\n");
+    if (start == NULL)
+    {
+        printf("Underflow\n");
+    }
+    else if (start->next == NULL)
+    {
+        start = NULL;
+    }
+    else
+    {
+        struct node *i = start;
+        while (i->next->next != NULL)
+        {
+            i = i->next;
+        }
+        i->next = NULL;
+    }
+}
+int main()
+{
+    push();
+    push();
+    traverselinkedlist();
+    pop();
+    traverselinkedlist();
+    return 0;
+}

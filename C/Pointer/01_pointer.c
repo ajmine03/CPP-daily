@@ -1,9 +1,10 @@
-#include<stdio.h>
+#include <stdio.h>
+
 int main()
 {
-    int i = 41 ;
-    int* k = &i ;
-    printf("%p\n",k);
-    printf("%p\n",&i);
-    return 0;
+    int a = 10;
+    int *p; // p হলো pointer
+    p = &a; // p এর মধ্যে a-এর address রাখলাম
+
+    printf("%d\n", *p); // *p = a-এর value
 }
