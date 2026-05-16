@@ -8,10 +8,10 @@ int main(){
     //cin>> name ;                      (space sara input nibe)
     getline(cin,name);                  // space soho input nibe.
     cout<<name<< endl;
-
+ 
     //String Length
     cout<< name.size() <<endl;
-
+ 
     //traverse 1
     
     /*

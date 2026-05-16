@@ -11,6 +11,7 @@ int main(){
 	p3.first = 'c';
 	cin>>p3.second;
 	
+	
 
 
 	//pair print
