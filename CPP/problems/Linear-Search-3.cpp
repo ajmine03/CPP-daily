@@ -45,6 +45,7 @@ int main(){
     for(int i = 0;i<n;i++){
         int num;
         cin>>num;
+        cout<<num<<endl;
 
         mp[num]++;
     }
