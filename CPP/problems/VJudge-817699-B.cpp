@@ -1,37 +1,34 @@
+// Problem: https://vjudge.net/contest/817699#problem/B
+// Platform: Virtual Judge
+// Created: 6/3/2026, 9:57:23 AM
 
+
+// Virtual Judge Note:
+// Standard I/O. Pay attention to time limits.
 #include <bits/stdc++.h>
 using namespace std;
 
 #define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
-
+#define endl '\n'
 
 int main() {
-   
-   // int c = 1;
-   // int n;cin>>n;
-   // while(n--){
+    fastio;
+    
+
     string name;
-    cin>>name;
-    string a , b ;
-    a = name;
-    reverse(a.begin(), a.end());
+    getline(cin,name);                  
+    cout<<name<< endl;
+    // int x = name.size();
 
-    // cout<<name<<' '<<a<<endl;
-
-
-    if(a == name){
-        cout<<"No"<<endl;
-
+    for (int i = 0; i < name.size(); ++i)
+    {
+        cout<< name[i] << endl;
     }
-    else{
-        cout<<"Yes"<<endl;
-    }
-     
-    // c++;
-    // cout<<c<<endl;
-
-
-   // }
+    
+    
     return 0;
 }
+
+
+
 
